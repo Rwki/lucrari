@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `doctor_pacient`
+--
+
+DROP TABLE IF EXISTS `doctor_pacient`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `doctor_pacient` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id_doctor` int(11) unsigned NOT NULL,
+  `id_pacient` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_user_doctor` (`id_doctor`),
+  KEY `id_user_pacient` (`id_pacient`),
+  CONSTRAINT `id_user_pacient` FOREIGN KEY (`id_pacient`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `id_user_doctor` FOREIGN KEY (`id_doctor`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `doctor_pacient`
+--
+
+LOCK TABLES `doctor_pacient` WRITE;
+/*!40000 ALTER TABLE `doctor_pacient` DISABLE KEYS */;
+/*!40000 ALTER TABLE `doctor_pacient` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -49,4 +77,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-04-16 19:00:27
+-- Dump completed on 2016-04-16 20:32:02
