@@ -1,3 +1,4 @@
+<?php require_once dirname(__FILE__) . '/../includes/autoload.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
