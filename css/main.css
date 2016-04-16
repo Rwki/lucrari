@@ -1,6 +1,8 @@
 div.body {
     min-height: 500px;
+    margin-top: 20px;
 }
+
 
 div.page-header h1 {
     font-size: 2em;

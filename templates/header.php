@@ -1,4 +1,7 @@
 <?php require_once dirname(__FILE__) . '/../includes/autoload.php'; ?>
+<?php
+  global $user;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,6 +54,7 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
+        <li><?php print $user->mail; ?></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
